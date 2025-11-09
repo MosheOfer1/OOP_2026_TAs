@@ -13,3 +13,31 @@ Welcome to the weekly code repository for our OOP 2026 tutorials — every week 
 • `Main.java` / `main.py` – sample usage, creating instances and calling methods  
 
 — End of Week 01 —
+
+---
+
+## TA2 – Week 02
+**What we did:**  
+• Introduced more complex OOP principles such as encapsulation and constructors.  
+• Developed a “Student” class with additional attributes and behaviors.  
+• Explored extending classes and basic inheritance.
+
+**What to look at in the “TA2” folder:**  
+• `Student.java` / `Student.py` – new class implementations  
+• `Main.java` / `main.py` – demonstration code using inheritance
+
+— End of Week 02 —
+
+---
+
+## TA3 – Week 03
+**What we did:**  
+• Covered polymorphism in depth and introduced interface/abstract classes.  
+• Added methods demonstrating method overriding and dynamic behavior.  
+• Hands-on tasks on writing flexible code using abstract superclasses.
+
+**What to look at in the “TA3” folder:**  
+• `Course.java` / `Course.py` – interface/abstract class examples  
+• `Main.java` / `main.py` – examples of polymorphic code
+
+— End of Week 03 —

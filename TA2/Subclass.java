@@ -1,3 +1,5 @@
+package TA2;
+
 public class Subclass extends AccessModifiers {
 
     public void test() {

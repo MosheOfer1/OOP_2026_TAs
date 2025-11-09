@@ -1,3 +1,5 @@
+package TA2;
+
 class Person {
     private String name;
     private Address address;

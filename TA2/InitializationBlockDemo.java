@@ -1,3 +1,5 @@
+package TA2;
+
 public class InitializationBlockDemo {
 
     // Static variable

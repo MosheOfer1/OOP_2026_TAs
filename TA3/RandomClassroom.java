@@ -45,6 +45,11 @@ public class RandomClassroom {
         System.out.println("=== Original ===");
         students.forEach(System.out::println);
 
+        sort(students);
+
+
+
+
         // 1️⃣ Anonymous inner class
         sort(students, new Comparator<Student>() {
             @Override

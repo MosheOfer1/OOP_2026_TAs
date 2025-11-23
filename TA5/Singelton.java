@@ -1,4 +1,4 @@
-package DesignPatterns;
+package TA5;
 
 // Singleton class representing God
 class God {

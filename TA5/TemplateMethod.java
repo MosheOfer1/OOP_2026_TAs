@@ -1,4 +1,4 @@
-package DesignPatterns;
+package TA5;
 
  // Abstract class defining the template method
     abstract class BeverageTemplate {

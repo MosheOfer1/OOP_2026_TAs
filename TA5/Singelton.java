@@ -6,6 +6,8 @@ class God {
 
     // Private constructor to prevent instantiation
     private God() {
+        createWorld();
+        destroyWorld();
     }
 
     // Method to get the single instance of the class
@@ -17,12 +19,12 @@ class God {
     }
 
     // Method to create the world
-    public void createWorld() {
+    private void createWorld() {
         System.out.println("Creating the world");
     }
 
     // Method to destroy the world
-    public void destroyWorld() {
+    private void destroyWorld() {
         System.out.println("Destroying the world");
     }
 }
@@ -31,10 +33,7 @@ class God {
     public static void main(String[] args) {
         // Using the Singleton pattern to get the same instance
         God godInstance1 = God.createGod();
-        godInstance1.createWorld();
-
         God godInstance2 = God.createGod();
-        godInstance2.destroyWorld();
 
         // Both instances should be the same
         System.out.println(godInstance1 == godInstance2);  // Output: true

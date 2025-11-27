@@ -1,7 +1,7 @@
 package TA5;
 
 // Singleton class representing God
-class God {
+final class God {
     private static God instance;
 
     // Private constructor to prevent instantiation
@@ -28,8 +28,8 @@ class God {
         System.out.println("Destroying the world");
     }
 }
-    public class Singelton{
 
+    public class Singelton{
     public static void main(String[] args) {
         // Using the Singleton pattern to get the same instance
         God godInstance1 = God.createGod();

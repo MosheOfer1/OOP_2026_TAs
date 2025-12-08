@@ -1,0 +1,11 @@
+Throwable
+   ├── Error
+   │   ├── OutOfMemoryError
+   │   └── StackOverflowError
+   └── Exception
+       ├── IOException (Checked)
+       ├── SQLException (Checked)
+       └── RuntimeException (Unchecked)
+           ├── NullPointerException (Unchecked)
+           ├── ArithmeticException (Unchecked)
+           └── ArrayIndexOutOfBoundsException (Unchecked)

@@ -1,3 +1,5 @@
+package TA7;
+
 public class MaxFinder<T extends Comparable<T>> {
     public T findMax(T a, T b) {
         return (a.compareTo(b) > 0) ? a : b;

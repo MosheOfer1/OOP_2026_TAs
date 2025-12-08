@@ -1,3 +1,5 @@
+package TA7;
+
 class ThrowExceptionExample{
     public static void throwExample() throws MyCustomException {
         throw new MyCustomException("This is a custom exception!");

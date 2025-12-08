@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package TA7;
 
 public class GenericMethods {
     public static <T> T getFirstElement(T[] array) {

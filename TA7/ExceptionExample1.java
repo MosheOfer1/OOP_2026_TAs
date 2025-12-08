@@ -1,3 +1,5 @@
+package TA7;
+
 public class ExceptionExample1 {
     public static void main(String[] args) {
         try {

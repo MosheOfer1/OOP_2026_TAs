@@ -34,6 +34,14 @@ class BitcoinPayment implements PaymentStrategy {
     }
 }
 
+// CashPayment strategy
+class CashPayment implements PaymentStrategy {
+    @Override
+    public void pay(int amount) {
+        System.out.println("Paying " + amount + " in cash");
+    }
+}
+
 // ShoppingCart class that uses a strategy
 class ShoppingCart {
     private List<Map<String, Object>> items = new ArrayList<>();
@@ -53,6 +61,10 @@ class ShoppingCart {
             totalAmount += (int) item.get("price");
         }
         paymentStrategy.pay(totalAmount);
+    }
+
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
     }
 }
 
@@ -92,6 +104,7 @@ public class StrategyExample {
         item4.put("price", 30);
         cart2.addItem(item4);
 
+//        cart2.setPaymentStrategy(creditCardPayment);
         cart2.checkout();
 
         // Cart 3: Bitcoin Payment

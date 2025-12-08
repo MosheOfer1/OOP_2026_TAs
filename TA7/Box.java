@@ -1,3 +1,5 @@
+package TA7;
+
 public class Box<T> {
     private T item;
 

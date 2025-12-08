@@ -1,12 +1,12 @@
 package TA6;
 
 // Component interface
-interface TextPrinter {
-    String printText();
+interface TextInterface {
+    String getText();
 }
 
 // Concrete component
-class SimpleTextPrinter implements TextPrinter {
+class SimpleTextPrinter implements TextInterface {
     private String text;
 
     public SimpleTextPrinter(String text) {
@@ -14,62 +14,62 @@ class SimpleTextPrinter implements TextPrinter {
     }
 
     @Override
-    public String printText() {
+    public String getText() {
         return text;
     }
 }
 
 // Decorator abstract class
-abstract class TextDecorator implements TextPrinter {
-    protected TextPrinter textPrinter;
+abstract class TextDecorator implements TextInterface {
+    protected TextInterface textPrinter;
 
-    public TextDecorator(TextPrinter textPrinter) {
+    public TextDecorator(TextInterface textPrinter) {
         this.textPrinter = textPrinter;
     }
 }
 
 // Concrete decorators
 class BoldTextDecorator extends TextDecorator {
-    public BoldTextDecorator(TextPrinter textPrinter) {
+    public BoldTextDecorator(TextInterface textPrinter) {
         super(textPrinter);
     }
 
     @Override
-    public String printText() {
-        return "\033[1m" + textPrinter.printText() + "\033[0m"; // ANSI escape for bold
+    public String getText() {
+        return "\033[1m" + textPrinter.getText() + "\033[0m"; // ANSI escape for bold
     }
 }
 
 class RedTextDecorator extends TextDecorator {
-    public RedTextDecorator(TextPrinter textPrinter) {
+    public RedTextDecorator(TextInterface textPrinter) {
         super(textPrinter);
     }
 
     @Override
-    public String printText() {
-        return "\033[91m" + textPrinter.printText() + "\033[0m"; // ANSI escape for red
+    public String getText() {
+        return "\033[91m" + textPrinter.getText() + "\033[0m"; // ANSI escape for red
     }
 }
 
 class UnderlineTextDecorator extends TextDecorator {
-    public UnderlineTextDecorator(TextPrinter textPrinter) {
+    public UnderlineTextDecorator(TextInterface textPrinter) {
         super(textPrinter);
     }
 
     @Override
-    public String printText() {
-        return "\033[4m" + textPrinter.printText() + "\033[0m"; // ANSI escape for underline
+    public String getText() {
+        return "\033[4m" + textPrinter.getText() + "\033[0m"; // ANSI escape for underline
     }
 }
 
 class ItalicTextDecorator extends TextDecorator {
-    public ItalicTextDecorator(TextPrinter textPrinter) {
+    public ItalicTextDecorator(TextInterface textPrinter) {
         super(textPrinter);
     }
 
     @Override
-    public String printText() {
-        return "\033[3m" + textPrinter.printText() + "\033[0m"; // ANSI escape for italic
+    public String getText() {
+        return "\033[3m" + textPrinter.getText() + "\033[0m"; // ANSI escape for italic
     }
 }
 
@@ -85,12 +85,12 @@ public class Decorator {
 //        TextPrinter underlineTextPrinter = new UnderlineTextDecorator(simpleTextPrinter);
 //        TextPrinter italicTextPrinter = new ItalicTextDecorator(simpleTextPrinter);
 
-        TextPrinter simpleTextPrinter2 = new SimpleTextPrinter("Coll Text");
-        TextPrinter boldTextPrinter2 = new BoldTextDecorator(simpleTextPrinter2);
-        TextPrinter redTextPrinter2 = new RedTextDecorator(boldTextPrinter2);
-        TextPrinter ans = new ItalicTextDecorator(redTextPrinter2);
+        TextInterface simpleTextPrinter2 = new SimpleTextPrinter("Coll Text");
+        TextInterface boldTextPrinter2 = new BoldTextDecorator(simpleTextPrinter2);
+        TextInterface redTextPrinter2 = new RedTextDecorator(boldTextPrinter2);
+        TextInterface ans = new ItalicTextDecorator(redTextPrinter2);
 
-        System.out.println(ans.printText());
+        System.out.println(ans.getText());
 //
 //        // Print the decorated text
 //        System.out.println("Simple Text:");

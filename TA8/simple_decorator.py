@@ -9,7 +9,9 @@ def my_decorator(func):
 @my_decorator
 def say_hello():
     print("Hello!")
+# Manually applies the decorator; equivalent to writing @my_decorator above the function
+# say_hello = my_decorator(say_hello)
 
 
-def __main__():
+if __name__ == "__main__":
     say_hello()

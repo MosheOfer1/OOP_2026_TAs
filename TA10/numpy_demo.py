@@ -7,7 +7,7 @@ broadcasting, advanced indexing, statistical functions, and image processing.
 
 import numpy as np
 import matplotlib
-matplotlib.use('Qt5Agg')
+# matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 from scipy import stats
 from skimage import io
@@ -523,11 +523,12 @@ def main():
 
     # Process image if available
     try:
+        pass
         # process_image('friends.jpg')
         # Add different kernel sizes for blurring
-        demonstrate_image_blurring('friends.jpg', kernel_size=(3, 3))  # Small blur
-        demonstrate_image_blurring('friends.jpg', kernel_size=(7, 7))  # Medium blur
-        demonstrate_image_blurring('friends.jpg', kernel_size=(15, 15))  # Strong blur
+        # demonstrate_image_blurring('friends.jpg', kernel_size=(3, 3))  # Small blur
+        # demonstrate_image_blurring('friends.jpg', kernel_size=(7, 7))  # Medium blur
+        # demonstrate_image_blurring('friends.jpg', kernel_size=(15, 15))  # Strong blur
     except Exception as e:
         print(f"Could not process image: {e}")
 
